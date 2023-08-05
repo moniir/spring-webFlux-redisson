@@ -25,7 +25,7 @@ public class FibService {
         System.out.println("clearing hash keys");
     }
 
-    //All the math:fib related hash value will be removed within 10 second time window
+    //All the math:fib related hash value will be removed within 10 seconds time window
     @CacheEvict(value = "math:fib",allEntries = true)
     @Scheduled(fixedRate = 10_000)
     public void clearCacheScheduled(){
