@@ -20,7 +20,7 @@ public class WeatherService {
     }
 
 
-    @Scheduled(fixedRate = 10_000)
+    @Scheduled(fixedRate = 100_000)  //100 sec
     public void update(){
         System.out.println("updating..");
         IntStream.rangeClosed(1,5).forEach(this.client::getWeatherInfo);
